@@ -1,0 +1,140 @@
+<div id="table-center">
+<div id="container">
+
+  <div id="content">
+    <div class="wrapper">
+      <div class="profile-user">
+        <h2 class="thumb">
+          <%self.avatar_standard%>
+          <div class="screen-name"><%self.login%></div>
+        </h2>
+      </div> <!-- .profile-user -->
+
+      <div class="section">
+        <ol id="timeline" class="statuses">
+
+          <%for day in days%>
+          <%for status in statuses[day]%>
+
+          <li class="hentry mine status <%status.tags%>">
+            <span class="status-body">
+              <span class="entry-content">
+                <%status.body%>
+              </span>
+            </span>
+
+            <span class="meta entry-meta">
+              <a class="entry-date" rel="bookmark" href="<%status.url%>"><span class="published"><%day%> <%status.time%></span></a>,
+              <span>przez <a href="<%status.transport_url%>"><span title="<%status.transport_description%>"><%status.transport%></span></a></span>
+            </span>
+          </li>
+
+          <%end%>
+          <%end%>
+
+        </ol>
+
+      </div> <!-- .section -->
+    </div> <!-- .wrapper -->
+  </div> <!-- content -->
+
+  <div id="sidebar-base">
+    <div id="sidebar">
+
+      <div id="profile" class="section profile-side">
+        <ul class="about vcard entry-author">
+          <li>
+            <span class="label">Imię i nazwisko</span>
+            <span class="fn"><%self.name%></span>
+          </li>
+          <li>
+            <span class="label">Lokalizacja</span>
+            <span class="adr"><%self.location%></span>
+          </li>
+          <li>
+            <span class="label">WWW</span>
+            <a class="url" href="<%self.url%>"><%self.url%></a>
+          </li>
+        </ul>
+      </div> <!-- #profile -->
+      <hr />
+
+      <div class="archives">
+        <h2 class="fm_menu sidebar-title">
+          <span>Archiwa</span>
+        </h2>
+        <div class="sidebar-menu">
+          <%for year in years%>
+            <h3><%year%></h3>
+            <div class="archive-months">
+              <%for archive_link in archives[year]%>
+                <span>{<%archive_link%>}</span>
+              <%end%>
+            </div>
+          <%end%>
+        </div>
+      </div>
+      <!-- tagi --> <!--
+      <div class="tags">
+        <h2 class="fm_menu sidebar-title">
+          <span>Tagi</span>
+        </h2>
+        <div class="sidebar-menu">
+          <%for tag in tags%>
+            <span>[<%tag%>]</span>
+          <%end%>
+        </div>
+      </div> --> <!-- tagi - koniec -->
+
+      <!-- obserwowani --> <!-- 
+      <div class="users">
+        <h2 class="fm_menu sidebar-title">
+          <span>Obserwowani</span>
+        </h2>
+        <div class="sidebar-menu">
+          <div class="users-list">
+            <%for user in tracked_users%>
+              <span class="vcard">
+                <%user.avatar_link%>
+              </span>
+            <%end%>
+          </div>
+
+          <div class="users-view-all">
+            <a rel="me" href="http://blip.pl/users/<%self.login%>/dashboard/">Pokaż wszystkich&hellip;</a>
+          </div>
+
+        </div>
+      </div>
+      <hr /> --> <!-- obserwowani - koniec -->
+
+      <!-- obserwujący --> <!--
+      <div class="users">
+        <h2 class="fm_menu sidebar-title">
+          <span>Obserwujący</span>
+        </h2>
+        <div class="sidebar-menu">
+          <div class="users-list">
+            <%for user in tracking_users%>
+              <span class="vcard">
+                <%user.avatar_link%>
+              </span>
+            <%end%>
+          </div>
+
+          <div class="users-view-all">
+            <a rel="me" href="http://blip.pl/users/<%self.login%>/dashboard/">Pokaż wszystkich&hellip;</a>
+          </div>
+
+        </div>
+      </div> --> <!-- obserwujący - koniec -->
+
+      <hr /> 
+      <div class="links section">
+        <%self.dashboard_link%> | <%self.rss_link%>
+      </div>
+
+    </div> <!-- #sidebar -->
+  </div> <!-- sidebar-base -->
+</div>
+</div>

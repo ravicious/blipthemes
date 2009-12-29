@@ -1,0 +1,285 @@
+/*
+ *  Twitter layout
+ *  ported by ^ravicious
+ */
+
+
+a {color: #2276bb; text-decoration: none;}
+a:hover {text-decoration: underline;}
+img {border: 0;}
+
+#table-center {
+  width: 760px;
+  margin: 20px auto;
+}
+
+#container {
+  margin: 10px auto;
+  overflow: hidden;
+  width: 763px;
+  background: transparent;
+  display: table-row;
+}
+
+#content, #sidebar-base {
+  display: table-cell;
+  vertical-align: top;
+}
+
+#content {
+  width: 560px;
+  background: white;
+  
+  -moz-border-radius-topleft: 5px;
+  -webkit-border-top-left-radius: 5px;
+
+  -moz-border-radius-bottomleft: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+}
+
+.wrapper {
+  padding: 15px;
+}
+
+#content h2 {
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+  margin-left: 10px;
+  font-weight: bold;
+  font-size-adjust: none;
+  font-stretch: normal;
+  font-style: normal;
+  font-variant: normal;
+  color: black;
+}
+
+#content h2.thumb {
+  font-size: 33px;
+  line-height: 50px;
+  padding-bottom: 20px;
+  padding: 10px 15px 10px 0;
+
+  clear: both;
+  float: none;
+}
+
+#content h2.thumb img {
+  height: 73px;
+  width: 73px;
+  margin-right: 10px !important;
+  float: left;
+  border: 0;
+
+  vertical-align: middle;
+}
+
+.profile-user h2 div {
+  margin-left: 65px;
+  margin-bottom: 40px;
+}
+
+div.section {
+  padding: 0 10px;
+}
+
+div.section, div.section div {
+  clear: both;
+  float: none;
+  position: relative;
+}
+
+ol.statuses {
+  font-size: 14.4px;
+  list-style-image: none;
+  list-style-position: outside;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ol.statuses li {
+  font-family: "Lucida Grande", sans-serif;
+  padding-bottom: 0.8em;
+  padding-left: 0.5em;
+  padding: 0.7em 0 0 0.6em;
+  color: #333333;
+  line-height: 15.8333px;
+
+  position: relative;
+
+  border-bottom: 1px dashed #d2dada;
+  line-height: 1.1em;
+}
+
+ol.statuses li:hover {
+  background-color: #f7f7f7;
+}
+
+ol.statuses li:first-child {
+  line-height: 1.5em;
+}
+
+ol.statuses li:first-child .entry-content {
+  font-size: 25px;
+}
+
+ol.statuses span.status-body {
+  margin-left: 0;
+  min-height: 0;
+
+  display: block;
+  overflow: hidden;
+  width: 425px;
+  padding-bottom: 10px;
+}
+
+ol.statuses span.status-body a {
+  color: #2276bb;
+}
+
+ol.statuses span.status-body img, .video {
+  display: block;
+  margin: 4px auto 0 auto;
+  border: 1px dashed #f7f7f7;
+}
+
+ol.statuses span.meta, .hentry .meta {
+  color: #999999;
+  display: block;
+  font-size: 0.764em;
+  margin: 3px 0 0;
+}
+
+ol.statuses span.meta a, .hentry .meta a {
+  color: #999999;
+}
+
+#sidebar-base {
+  width: 193px;
+  background: #DDEEF6;
+  border-left: 1px solid #C0DEED;
+  line-height: 1.2;
+
+  -moz-border-radius-topright: 5px;
+  -webkit-border-top-right-radius: 5px;
+
+  -moz-border-radius-bottomright: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+
+  padding: 0;
+  vertical-align: top;
+}
+
+#sidebar {
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding-top: 0.5em;
+  width: 198px;
+  font-size: 12px;
+}
+
+#sidebar #profile {
+  margin-bottom: 1em !important;
+}
+
+#sidebar .section {
+  padding-bottom: 16px;
+  padding: 0 10px;
+}
+
+.about {
+  margin-bottom: 0.6em;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+
+  list-style-image: none;
+  list-style-position: outside;
+  list-style-type: none;
+}
+
+.about li {
+  padding-bottom: 3px;
+}
+
+.about .label {
+  font-weight: bold;
+}
+
+#sidebar hr {
+  -moz-background-clip: border;
+  -moz-background-inline-policy: continuous;
+  -moz-background-origin: padding;
+  background: #c0deed none repeat scroll 0 0;
+  border: none;
+  color: #c0deed;
+  display: block;
+  height: 1px;
+  margin: 0.5em 14px;
+  opacity: 0.7;
+}
+
+h2.sidebar-title {
+  font-size: 1.05em;
+  font-weight: normal;
+  padding: 0.2em 14px;
+  margin: 0;
+}
+
+#sidebar .users-list {
+  padding: 5px 10px 5px 14px;
+  width: 174px;
+  max-height: 150px;
+  overflow: hidden;
+}
+
+.users-list span {
+  float: left;
+  padding: 0 3px 2px 1px;
+}
+
+.users-list img {
+  padding: 0;
+  width: 24px;
+  height: 24px;
+}
+
+.users-view-all {
+  font-size: 0.9em;
+  padding: 0 14px;
+}
+
+.tags, .archives {
+  padding: 5px;
+  font-size: 12px;
+  line-height: 1.5em;
+}
+
+.tags .sidebar-menu, .archives .sidebar-menu {
+  text-align: center;
+}
+
+.tags .sidebar-menu span, .archives .sidebar-menu span {
+  color: #d2dada;
+  font-weight: bold;
+}
+
+.tags .sidebar-menu span a, .archives .sidebar-menu span a {
+  font-weight: normal;
+}
+
+.archives .sidebar-menu h3 {
+  font-weight: normal;
+  font-style: italic;
+}
+
+.links {
+  text-align: center;
+  line-height: 1.8em;
+}
+
+.hide, .test {
+  display: none;
+}
